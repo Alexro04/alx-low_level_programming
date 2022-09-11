@@ -2,7 +2,7 @@
 /**
  * main - prints combination of 3 digit numbers without rep.
  *
- * Return; 0
+ * Return: 0
  */
 int main(void)
 {
@@ -30,6 +30,6 @@ int main(void)
 			}
 		}
 	}
-	putchar('\n');
-	return (0);
+putchar('\n');
+return (0);
 }
