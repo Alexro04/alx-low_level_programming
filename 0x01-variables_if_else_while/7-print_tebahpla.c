@@ -2,9 +2,8 @@
 #include <ctype.h>
 /**
  * main - entry point
- *
  * Return: 0
- * Printing the alphabets reversed
+ * Printinf the alphabets reversed
  */
 int main(void)
 {
@@ -16,4 +15,5 @@ int main(void)
 		putchar(r);
 	}
 	putchar('\n');
+	return (0);
 }
