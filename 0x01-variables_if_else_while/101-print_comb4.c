@@ -16,13 +16,16 @@ int main(void)
 		{
 			for (c = 0; c < 10; c++)
 			{
-				putchar(a % 10 + '0');
-				putchar(b % 10 + '0');
-				putchar(c % 10 + '0');
-				if (a < 7)
+				if (a < b && b < c)
 				{
-					putchar(44);
-					putchar(32);
+					putchar(a % 10 + '0');
+					putchar(b % 10 + '0');
+					putchar(c % 10 + '0');
+					if (a < 7)
+					{
+						putchar(44);
+						putchar(32);
+					}
 				}
 			}
 		}
