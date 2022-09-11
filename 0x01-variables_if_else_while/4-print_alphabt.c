@@ -10,11 +10,18 @@ int main(void)
 {
 	int a;
 
-	for (a = 'A'; a <= 'z'; a++)
+	for (a = 'A'; a <= 'z';)
 	{
+		if (a == 'e' || a == 'q')
+		{
+			a++;
+			continue;
+		}
 		a = tolower(a);
 		putchar(a);
-}
+		a++;
+	}
 	putchar('\n');
 	return (0);
 }
+
