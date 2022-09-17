@@ -6,22 +6,21 @@
  */
 void print_diagonal(int n)
 {
-	int spc;
-	int times;
-	int loop;
+int x;
+int y;
 
-	loop = 0;
-	spc = 0;
-	for (times = 0; times < n; times++)
+if (n > 0)
+{
+	for (x = 0; x < n; x++)
 	{
-		while (spc < loop && times < n)
+		for (y = 0; y < x; y++)
 		{
 			_putchar(' ');
-			spc++;
 		}
-		_putchar('\\');
-		_putchar('\n');
-		loop++;
-		spc = 0;
+	_putchar(92);
+	_putchar('\n');
 	}
+}
+else
+	_putchar('\n');
 }
