@@ -1,41 +1,26 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * fizz_buzz - print 0-99 taking multiples of 3&5 into consideration
- * 
- * main - test code
+ * main - print 0-99 taking multiples of 3&5 into consideration
  *
- * @n: argument
+ *
  * Return: 0
  */
-void fizz_buzz(void)
+int main(void)
 {
 	int n;
 
 	for (n = 1; n <= 100; n++)
 	{
 		if (n % 3 == 0 && n % 5 == 0)
-		{
-			printf("FizzBuzz ");
-		}
+			printf("FizzBuzz");
 		else if (n % 3 == 0)
-		{
-			printf("Fizz ");
-		}
+			printf("Fizz");
 		else if (n % 5 == 0)
-		{
-			printf("Buzz ");
-		}
+			printf("Buzz");
 		else
-		{
-			printf("%d ", n);
-		}
+			printf("%d", n);
 	}
 	putchar('\n');
-}
-
-int main(void)
-{
-	fizz_buzz();
 	return (0);
 }
