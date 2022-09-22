@@ -1,30 +1,30 @@
 #include "main.h"
-/**
-  * rot13 - encode a string with rot13
-  * @p: the string
-  *
-  *
-  * Return: rot
-  *
-  */
-char *rot13(char *p)
-{
-	char *rot = p;
-	int j = 0;
-	char rotvalue1[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	char rotvalue2[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-	while (*rot)
+/**
+ * rot13 - encrypts code
+ * @s: string to encrypt
+ * Return: char value
+ */
+
+char *rot13(char *s)
+{
+	char part1[52] = "aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ";
+	char part2[52] = "nNoOpPqQrRsStTuUvVwWxXyYzZaAbBcCdDeEfFgGhHiIjJkKlLmM";
+
+	int i;
+	int j = 0;
+
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		for (j = 0; rotvalue1[j]; j++)
+
+		for (j = 0; part1[j] != '\0'; j++)
 		{
-			if (*rot == rotvalue1[j])
+			if (s[i] == part1[j])
 			{
-				*rot = rotvalue2[j];
+				s[i] = part2[j];
 				break;
 			}
 		}
-		rot++;
 	}
-	return (p);
+	return (s);
 }
