@@ -6,11 +6,17 @@ include "main.h"
  */
 int _strlen_recursion(char *s)
 {
-	int len;
+	int len = 0;
 
-	len = 0;
-	if (!*s)
-		return;
-	len = 1;
-	return(len + _strlen_recursion(s + 1));
+	if (*s == '\0')
+	{
+		return (0);
+	}
+	if (*s != '\0')
+	{
+		len++;
+		len += _strlen_recursion(++s);
+		return (len);
+	}
+	return (0);
 }
