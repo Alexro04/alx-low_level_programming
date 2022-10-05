@@ -22,20 +22,20 @@ char *str_concat(char *s1, char *s2)
 		s1++;
 		total_len++;
 	}
-	while(*s2)
+	while (*s2)
 	{
 		s2++;
 		total_len++;
 	}
 
 	final = malloc(sizeof(char) * (total_len + 1));
-	
+
 	while (first_str[i] != '\0')
 	{
 		final[i] = first_str[i];
 		i++;
 	}
-	while(second_str[j] != '\0')
+	while (second_str[j] != '\0')
 	{
 		final[i] = second_str[j];
 		i++;
