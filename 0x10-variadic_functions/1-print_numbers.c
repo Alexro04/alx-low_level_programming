@@ -1,6 +1,6 @@
 #include <stdarg.h>
 #include <stdio.h>
-#include "main.h"
+#include "variadic_function.h"
 /**
  * print_numbers - prints all the number arguments
  *
