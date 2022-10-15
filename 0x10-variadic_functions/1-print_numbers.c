@@ -1,7 +1,7 @@
+#include "variadic_functions.h"
 #include <stdarg.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include "variadic_functions.h"
 /**
  * print_numbers - prints all the number arguments
  *
@@ -26,6 +26,6 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 			printf("%s", separator);
 		}
 	}
-	printf('\n');
+	_putchar('\n');
 	va_end(ap);
 }
