@@ -1,21 +1,12 @@
 #include "variadic_functions.h"
-
 #include <stdarg.h>
-
 #include <stdio.h>
-
 #include <stdlib.h>
-
 /**
-
  * print_all - prints anything
-
  * @format: the format we print in
-
  * Return: void
-
  */
-
 void print_all(const char * const format, ...)
 {
 	va_list ptr;
@@ -56,8 +47,7 @@ void print_all(const char * const format, ...)
 		i++;
 		}
 		va_end(ptr);
-		break;
+			break;
 	}
 	printf("\n");
-
 }
