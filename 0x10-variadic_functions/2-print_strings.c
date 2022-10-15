@@ -22,7 +22,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	for (i = 0; i < n; i++)
 	{
 		word = va_arg(ap, char *);
-		if (word != NULL)
+		if (word)
 		{
 			printf("$s", word);
 		}
@@ -31,11 +31,11 @@ void print_strings(const char *separator, const unsigned int n, ...)
 			printf("(nil)");
 		}
 
-		if (i < (n - 1) && separator != NULL)
+		if (i < (n - 1) && separator)
 		{
 			printf("%s", separator);
 		}
 	}
-	printf('\n');
 	va_end(ap);
+	_putchar('\n');
 }
