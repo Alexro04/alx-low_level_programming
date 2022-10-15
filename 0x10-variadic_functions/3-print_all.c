@@ -11,8 +11,7 @@ void print_all(const char * const format, ...)
 {
 	va_list ptr;
 	char *string;
-	unsigned int i = 0;
-	unsigned int flag;
+	unsigned int i = 0, flag;
 
 	while (format)
 	{
@@ -41,7 +40,6 @@ void print_all(const char * const format, ...)
 				flag = 0;
 				break;
 		}
-
 		if (format[i + 1] && flag)
 			printf(", ");
 		i++;

@@ -24,7 +24,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		word = va_arg(ap, char *);
 		if (word)
 		{
-			printf("$s", word);
+			printf("%s", word);
 		}
 		else
 		{
